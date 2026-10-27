@@ -1,0 +1,34 @@
+---
+import site from '../data/site.json';
+import { unsplash } from '../lib/unsplash';
+const { tasting } = site;
+const photo = unsplash('1553361371-9b22f78e8b1d', [800, 1200, 1800]);
+---
+
+<section id="degustari" class="tasting" aria-label="Degustări la vinotecă">
+  <div class="tasting__media">
+    <img class="cover-img" data-parallax="0.12" src={photo.src} srcset={photo.srcset} sizes="(max-width: 859px) 100vw, 58vw" alt="Pahar de vin roșu pe masa de degustare" loading="lazy" decoding="async" />
+  </div>
+  <div class="container tasting__inner">
+    <div class="tasting__head" data-reveal>
+      <span class="eyebrow">Degustări la vinotecă</span>
+      <h2 class="h2 h2--48">O seară între rafturi cu vin</h2>
+      <p class="tasting__lead">
+        Cinci vinuri de la producători diferiți, prezentate de somelierul nostru, cu gustări din bucătăria vinotecii. O seară durează aproximativ două ore.
+      </p>
+    </div>
+    <ol class="steps">
+      {tasting.steps.map((s, i) => (
+        <li class="step" data-reveal data-delay={String(i * 150)}>
+          <span class="step__num">{String(i + 1).padStart(2, '0')}</span>
+          <h3>{s.title}</h3>
+          <p>{s.text}</p>
+        </li>
+      ))}
+    </ol>
+    <div class="tasting__cta" data-reveal>
+      <a href="#rezervare" class="btn-pill btn-pill--ondark">Rezervă o degustare <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+      <span class="tasting__price">{tasting.price}</span>
+    </div>
+  </div>
+</section>

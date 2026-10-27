@@ -1,0 +1,32 @@
+---
+import { unsplash } from '../lib/unsplash';
+const grapes = unsplash('1423483641154-5411ec9c0ddf', [600, 1000, 1400]);
+const glass = unsplash('1474722883778-792e7990302f', [600, 1000, 1400]);
+---
+
+<section class="collage" aria-label="Despre vinotecă">
+  <div class="collage__grid">
+    <div class="collage__cell collage__cell--center" data-reveal>
+      <span class="eyebrow">Vitrina noastră</span>
+      <h2 class="h2 h2--36">Vinuri bune<br />din toată Moldova</h2>
+      <p class="collage__lead">
+        140 de etichete de la 24 de producători, de la crame cunoscute până la vinării mici de familie din Codru, Ștefan Vodă și Valul lui Traian.
+      </p>
+      <a href="#colectie" class="btn-outline">Vezi colecția</a>
+    </div>
+    <div class="collage__photo">
+      <img class="cover-img" data-parallax="-0.08" src={grapes.src} srcset={grapes.srcset} sizes="(max-width: 859px) 100vw, 512px" alt="Mâini care țin un ciorchine de struguri negri" loading="lazy" decoding="async" />
+    </div>
+    <div class="collage__photo">
+      <img class="cover-img" data-parallax="-0.08" src={glass.src} srcset={glass.srcset} sizes="(max-width: 859px) 100vw, 512px" alt="Pahar de vin roșu lângă struguri" loading="lazy" decoding="async" />
+    </div>
+    <div class="collage__cell" data-reveal data-delay="150">
+      <h2 class="h2 h2--30" style="text-align:center">Despre noi</h2>
+      <p class="collage__body">
+        Goodwine este o vinotecă pe colțul străzilor Șciusev și Cebotari, în centrul Chișinăului. Nu producem vin. Gustăm, alegem și aducem în vitrină sticle de la producători moldoveni pe care îi cunoaștem personal, de la crame consacrate până la vinării mici de familie.
+      </p>
+      <p class="collage__body">Le poți gusta la pahar, la masă sau pe terasă, ori le poți lua acasă la sticlă.</p>
+      <span class="collage__sign">Echipa Goodwine</span>
+    </div>
+  </div>
+</section>

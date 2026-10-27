@@ -1,0 +1,33 @@
+---
+import site from '../data/site.json';
+import { unsplash } from '../lib/unsplash';
+const shelves = unsplash('1516594915697-87eb3b1c14ea');
+---
+
+<section id="colectie" class="collection" aria-label="Din vitrină">
+  <div class="band collection__band">
+    <img data-parallax="0.2" data-scale="1.1" src={shelves.src} srcset={shelves.srcset} sizes="100vw" alt="Sticle de vin așezate pe rafturi" loading="lazy" decoding="async" />
+  </div>
+  <div class="container collection__inner">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Din vitrină</span>
+      <h2 class="h2 h2--48">Șase vinuri pe care oaspeții le cer cel mai des</h2>
+    </div>
+    <div class="collection__grid">
+      {site.collection.map((b, i) => (
+        <div data-reveal data-delay={String((i % 3) * 120)}>
+          <a href="#rezervare" class="wine-card">
+            <div class="wine-card__bottle">
+              <img src={b.image} alt={`Sticla ${b.name}`} loading="lazy" decoding="async" />
+            </div>
+            <div class="wine-card__info">
+              <div class="wine-card__name">{b.name}</div>
+              <div class="wine-card__meta">{b.type} · {b.year}</div>
+            </div>
+            <span class="wine-card__price">{b.price}</span>
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

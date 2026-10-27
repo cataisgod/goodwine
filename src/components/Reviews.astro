@@ -1,0 +1,18 @@
+---
+import site from '../data/site.json';
+---
+
+<section class="reviews" aria-label="Recenzii">
+  <div class="reviews__inner">
+    <h2 class="h2 h2--48" data-reveal>Ce spun cei care au trecut pe la noi</h2>
+    <div class="reviews__grid">
+      {site.testimonials.map((t, i) => (
+        <figure class="review" data-reveal data-delay={String(i * 150)}>
+          <span class="diamond" aria-hidden="true"></span>
+          <blockquote>{t.quote}</blockquote>
+          <figcaption>{t.author}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </div>
+</section>

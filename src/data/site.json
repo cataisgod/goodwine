@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "title": "Goodwine · Vinotecă în centrul Chișinăului",
+    "description": "Goodwine, vinotecă în centrul Chișinăului. 140 de vinuri de la 24 de producători din Moldova, la pahar sau la sticlă, și seri de degustare de joi până duminică.",
+    "ogImage": "https://images.unsplash.com/photo-1543418219-44e30b057fea?w=1200&q=80"
+  },
+  "links": [
+    { "label": "Acasă", "id": "acasa" },
+    { "label": "Vinuri", "id": "vinuri" },
+    { "label": "Colecția", "id": "colectie" },
+    { "label": "Degustări", "id": "degustari" },
+    { "label": "Întrebări", "id": "intrebari" }
+  ],
+  "hero": {
+    "eyebrow": "Vinoteca de familie · Chisinau, Moldova · din 1998",
+    "title": ["Gustul răbdării,", "în fiecare pahar"],
+    "text": "140 de vinuri de la 24 de producători din Moldova, alese pe rând de echipa noastră și servite la pahar sau la sticlă, în centrul Chișinăului.",
+    "cta": "Rezervă o degustare",
+    "rating": "4,8 din 5 · 1.236 de recenzii ale vizitatorilor"
+  },
+  "wines": [
+    {
+      "name": "Fetească Neagră Rezervă",
+      "region": "Vinărie de familie din Codru",
+      "year": "2019",
+      "notes": "Prune uscate, vișine coapte și un fum discret de stejar. Taninuri catifelate și un final lung, cald, cu note de ciocolată amăruie.",
+      "aging": "14 luni în baric de stejar",
+      "serve": "16 până la 18 °C",
+      "pair": "miel la cuptor, brânzeturi maturate",
+      "price": "289 lei · 75 lei paharul",
+      "image": "/bottles/angelus.png"
+    },
+    {
+      "name": "Rară Neagră / Cabernet Sauvignon",
+      "region": "Cramă din Ștefan Vodă",
+      "year": "2018",
+      "notes": "Coacăze negre, cireșe amare și cedru. Un cupaj structurat, cu aciditate vie, care se deschide frumos după o oră în decantor.",
+      "aging": "18 luni în baric, 6 luni în sticlă",
+      "serve": "17 până la 18 °C",
+      "pair": "friptură de vită, ciuperci la grătar",
+      "price": "329 lei · 85 lei paharul",
+      "image": "/bottles/grandcru.png"
+    },
+    {
+      "name": "Viorica",
+      "region": "Vinărie mică din Codru",
+      "year": "2022",
+      "notes": "Flori de tei, caise și o notă fină de busuioc. Aromat și sec, cu o aciditate proaspătă care nu obosește paharul.",
+      "aging": "6 luni pe drojdie fină, în inox",
+      "serve": "8 până la 10 °C",
+      "pair": "plăcinte cu brânză, pește la grătar",
+      "price": "179 lei · 50 lei paharul",
+      "image": "/bottles/pinot.png"
+    },
+    {
+      "name": "Rosé de Rară Neagră",
+      "region": "Cramă din Valul lui Traian",
+      "year": "2023",
+      "notes": "Trandafir, zmeură și coajă de grepfrut. Sec, ușor și răcoritor, bun pentru serile lungi de vară pe terasă.",
+      "aging": "4 luni în inox, la rece",
+      "serve": "8 până la 10 °C",
+      "pair": "salate de vară, zeamă de pui",
+      "price": "149 lei · 45 lei paharul",
+      "image": "/bottles/crianza.png"
+    }
+  ],
+  "tagline": "Gustăm sute de vinuri ca să punem în vitrină doar sticlele care merită o seară întreagă.",
+  "collection": [
+    { "name": "Fetească Neagră", "type": "Roșu sec", "year": "2019", "price": "289 lei", "image": "/bottles/slim.png" },
+    { "name": "Rară Neagră & Merlot", "type": "Cupaj roșu", "year": "2018", "price": "329 lei", "image": "/bottles/ribon.png" },
+    { "name": "Viorica", "type": "Alb sec", "year": "2022", "price": "179 lei", "image": "/bottles/riberablack.png" },
+    { "name": "Rosé de Rară Neagră", "type": "Rosé sec", "year": "2023", "price": "149 lei", "image": "/bottles/crianza.png" },
+    { "name": "Fetească Albă", "type": "Alb sec", "year": "2023", "price": "159 lei", "image": "/bottles/pinot.png" },
+    { "name": "Pinot Noir", "type": "Roșu sec", "year": "2020", "price": "259 lei", "image": "/bottles/angelus.png" }
+  ],
+  "tasting": {
+    "steps": [
+      { "title": "Alegi data", "text": "Organizăm degustări de joi până duminică, la 18:00 și la 20:30." },
+      { "title": "Vii la vinotecă", "text": "Ne găsești pe colțul străzilor Șciusev și Cebotari. Avem 20 de locuri în sală și o terasă pentru 6 persoane." },
+      { "title": "Pleci cu vinul preferat", "text": "Primești 12% reducere la sticlele cumpărate în seara degustării." }
+    ],
+    "price": "350 lei de persoană · anulare gratuită cu 48 de ore înainte"
+  },
+  "testimonials": [
+    { "quote": "Am venit pentru un pahar de Fetească Neagră și am plecat cu șase sticle de Viorica. Somelierul ne-a povestit despre fiecare producător ca despre un prieten.", "author": "Ioana Mărgărit, Chișinău" },
+    { "quote": "Am organizat aniversarea de 40 de ani în sala de la etaj. Totul a fost pregătit cu grijă, de la meniu la ordinea vinurilor.", "author": "Radu Ciobanu, Bălți" },
+    { "quote": "Cea mai bună selecție de vinuri moldovenești pe care am găsit-o în Chișinău. Merită singură drumul de la Iași.", "author": "Elena Vasilache, Iași" }
+  ],
+  "faqs": [
+    { "q": "Cât costă o degustare?", "a": "350 lei de persoană. Prețul include cinci vinuri de la producători diferiți, prezentarea somelierului și gustări din bucătăria noastră." },
+    { "q": "Pot veni și fără rezervare?", "a": "Da. Vinoteca e deschisă pentru un pahar de vin sau pentru cumpărături și fără rezervare. Rezervarea e necesară doar pentru degustări și pentru mesele de seară din weekend." },
+    { "q": "Pot anula sau muta rezervarea?", "a": "Da. Anularea este gratuită cu până la 48 de ore înainte. După acest termen te putem reprograma fără costuri suplimentare." },
+    { "q": "Pot cumpăra vin la pachet?", "a": "Da. Toate cele 140 de vinuri din vitrină se vând și la sticlă, la pachet. Te ajutăm să alegi pentru o cină, un cadou sau o colecție." },
+    { "q": "Organizați evenimente private?", "a": "Da. La etaj avem o sală de banchete de 47 m², potrivită pentru aniversări, întâlniri de echipă și degustări private. Scrie-ne pe wine@goodwine.md." },
+    { "q": "Unde vă găsim?", "a": "Pe strada Alexei Șciusev, colț cu strada Mihail Cebotari, în centrul Chișinăului. Avem două intrări și o terasă interioară." }
+  ],
+  "contact": {
+    "address": "Strada Alexei Șciusev, colț cu str. Mihail Cebotari, Chișinău, Republica Moldova",
+    "phone": "+373 68 898 998",
+    "phoneHref": "tel:+37368898998",
+    "email": "wine@goodwine.md",
+    "social": [
+      { "label": "Instagram", "icon": "ph-instagram-logo", "href": "https://instagram.com" },
+      { "label": "Facebook", "icon": "ph-facebook-logo", "href": "https://facebook.com" },
+      { "label": "Pinterest", "icon": "ph-pinterest-logo", "href": "https://pinterest.com" }
+    ]
+  }
+}

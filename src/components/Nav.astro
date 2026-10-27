@@ -1,0 +1,31 @@
+---
+import site from '../data/site.json';
+const menuLinks = [...site.links, { label: 'Rezervare', id: 'rezervare' }];
+---
+
+<nav class="nav" aria-label="Principal">
+  <div class="nav__pill">
+    <a href="#acasa" class="nav__logo" aria-label="Goodwine, acasă">
+      <img src="/logo/goodwine-2b-red.png" alt="good & wine" width="156" height="28" />
+    </a>
+    <div class="nav__links">
+      {site.links.map((l, i) => (
+        <a href={`#${l.id}`} class:list={['nav__link', { 'is-active': i === 0 }]} data-nav-link={l.id} aria-current={i === 0 ? 'page' : undefined}>
+          {l.label}
+        </a>
+      ))}
+    </div>
+    <a href="#rezervare" class="nav__cta">
+      <span class="nav__cta-long">Rezervă degustare</span><span class="nav__cta-short">Rezervă</span>
+    </a>
+    <button class="nav__burger" type="button" aria-label="Meniu" aria-expanded="false" aria-controls="mobile-menu" data-menu-toggle>
+      <span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="menu" id="mobile-menu" data-menu>
+  {menuLinks.map((l, i) => (
+    <a href={`#${l.id}`} style={`--i:${i}`} data-menu-link>{l.label}</a>
+  ))}
+</div>

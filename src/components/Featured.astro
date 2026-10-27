@@ -1,0 +1,70 @@
+---
+import site from '../data/site.json';
+import { unsplash } from '../lib/unsplash';
+const { wines } = site;
+const w = wines[0];
+const pad = (n: number) => String(n).padStart(2, '0');
+const hills = unsplash('1596142332133-327e2a0ff006');
+const rows = unsplash('1464638681273-0962e9b53566');
+---
+
+<section id="vinuri" class="featured" aria-label="Recomandările somelierului" data-featured>
+  <div class="band featured__band-top">
+    <img data-parallax="0.18" src={hills.src} srcset={hills.srcset} sizes="100vw" alt="Dealuri cu vie în lumina dimineții" loading="lazy" decoding="async" />
+  </div>
+
+  <div class="container featured__grid">
+    <div class="featured__bottle-col">
+      <div class="featured__bottle-parallax" data-parallax="-0.1">
+        <div class="featured__bottle">
+          <div class="featured__stack">
+            {wines.map((x, i) => (
+              <img
+                class:list={[{ 'is-active': i === 0 }]}
+                src={x.image}
+                alt={`Sticla ${x.name}`}
+                aria-hidden={i === 0 ? undefined : 'true'}
+                data-feat-img
+                decoding="async"
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="featured__text" aria-live="polite">
+      <span class="eyebrow">Recomandarea somelierului · <span data-f="counter">{pad(1)} / {pad(wines.length)}</span></span>
+      <div>
+        <h2 class="h2 h2--36" data-f="name">{w.name}</h2>
+        <div class="featured__region" data-f="region">{w.region}</div>
+      </div>
+      <div class="featured__year">Recolta <span data-f="year">{w.year}</span></div>
+      <p class="featured__notes" data-f="notes">{w.notes}</p>
+      <dl class="featured__dl">
+        <dt>Maturare</dt><dd data-f="aging">{w.aging}</dd>
+        <dt>Servire</dt><dd data-f="serve">{w.serve}</dd>
+        <dt>Se potrivește cu</dt><dd data-f="pair">{w.pair}</dd>
+      </dl>
+      <div class="featured__buy">
+        <span class="featured__price" data-f="price">{w.price}</span>
+        <a href="#rezervare" class="btn-outline">Gustă-l la vinotecă</a>
+      </div>
+      <div class="featured__controls">
+        <button type="button" class="round-btn round-btn--prev" aria-label="Vinul anterior" data-feat-prev><i class="ph ph-caret-left" aria-hidden="true"></i></button>
+        <div class="dots">
+          {wines.map((x, i) => (
+            <button type="button" class:list={['dot', { 'is-active': i === 0 }]} aria-label={x.name} aria-current={i === 0 ? 'true' : undefined} data-feat-dot={i}></button>
+          ))}
+        </div>
+        <button type="button" class="round-btn round-btn--next" aria-label="Vinul următor" data-feat-next><i class="ph ph-caret-right" aria-hidden="true"></i></button>
+      </div>
+    </div>
+  </div>
+
+  <div class="band featured__band-bottom">
+    <img data-parallax="0.14" src={rows.src} srcset={rows.srcset} sizes="100vw" alt="Rânduri de vie la apus" loading="lazy" decoding="async" />
+  </div>
+
+  <script is:inline type="application/json" id="wines-data" set:html={JSON.stringify(wines)} />
+</section>

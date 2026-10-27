@@ -1,0 +1,56 @@
+---
+import { unsplash } from '../lib/unsplash';
+const photo = unsplash('1470158499416-75be9aa0c4db');
+const guests = [
+  { value: '1', label: '1' },
+  { value: '2', label: '2' },
+  { value: '3', label: '3' },
+  { value: '4', label: '4' },
+  { value: '6', label: '5 până la 8' },
+  { value: '12', label: 'Grup peste 8' },
+];
+---
+
+<section id="rezervare" class="booking" aria-label="Rezervă o degustare">
+  <div class="booking__media">
+    <img class="cover-img" data-parallax="0.12" src={photo.src} srcset={photo.srcset} sizes="100vw" alt="Două pahare de vin în lumina apusului" loading="lazy" decoding="async" />
+  </div>
+  <div class="booking__grid">
+    <div class="booking__intro" data-reveal>
+      <h2 class="h2 h2--48">Rezervă-ți locul la masa noastră</h2>
+      <p>Completează formularul și te sunăm în 24 de ore pentru confirmare. Anularea este gratuită cu până la 48 de ore înainte.</p>
+    </div>
+    <div data-reveal data-delay="150">
+      <div class="card-form card-form--sent" role="status" hidden data-booking-sent>
+        <span class="diamond" aria-hidden="true"></span>
+        <h3>Rezervarea a fost trimisă</h3>
+        <p>Mulțumim, <span data-sent-name></span>. Te sunăm în 24 de ore pentru confirmare și îți trimitem coordonatele pe <span data-sent-email></span>.</p>
+        <button type="button" data-booking-reset>Fă o altă rezervare</button>
+      </div>
+
+      <form class="card-form" novalidate data-booking-form>
+        <label class="field" data-field="name">Nume
+          <input name="name" autocomplete="name" placeholder="Ana Popescu" aria-describedby="err-name" />
+          <span class="field__error" id="err-name" aria-live="polite"></span>
+        </label>
+        <label class="field" data-field="email">Email
+          <input name="email" type="email" autocomplete="email" placeholder="ana@exemplu.ro" aria-describedby="err-email" />
+          <span class="field__error" id="err-email" aria-live="polite"></span>
+        </label>
+        <div class="field-row">
+          <label class="field" data-field="date">Data
+            <input name="date" type="date" aria-describedby="err-date" />
+            <span class="field__error" id="err-date" aria-live="polite"></span>
+          </label>
+          <label class="field">Persoane
+            <select name="guests">
+              {guests.map((g) => <option value={g.value} selected={g.value === '2'}>{g.label}</option>)}
+            </select>
+          </label>
+        </div>
+        <button type="submit" class="btn-submit" data-booking-submit>Trimite rezervarea</button>
+        <span class="form-note">350 lei de persoană, plătești la vinotecă. Doar pentru persoane peste 18 ani.</span>
+      </form>
+    </div>
+  </div>
+</section>

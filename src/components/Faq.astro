@@ -1,0 +1,27 @@
+---
+import site from '../data/site.json';
+---
+
+<section id="intrebari" class="faq" aria-label="Întrebări frecvente">
+  <div class="faq__inner">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Întrebări frecvente</span>
+      <h2 class="h2 h2--36">Înainte să ne vizitezi</h2>
+    </div>
+    <div class="faq__list" data-faq>
+      {site.faqs.map((f, i) => (
+        <div class:list={['faq__item', { 'is-open': i === 0 }]}>
+          <button type="button" class="faq__q" id={`faq-q-${i}`} aria-expanded={i === 0 ? 'true' : 'false'} aria-controls={`faq-a-${i}`}>
+            <span>{f.q}</span>
+            <i class="ph ph-plus" aria-hidden="true"></i>
+          </button>
+          <div class="faq__panel" id={`faq-a-${i}`} role="region" aria-labelledby={`faq-q-${i}`}>
+            <div>
+              <p class="faq__a">{f.a}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

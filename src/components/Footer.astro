@@ -1,0 +1,35 @@
+---
+import site from '../data/site.json';
+const { contact } = site;
+const year = new Date().getFullYear();
+---
+
+<footer id="contact" class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <img src="/logo/goodwine-2b-light.png" alt="good & wine" width="223" height="40" loading="lazy" />
+      <span>{contact.address}</span>
+    </div>
+    <div class="footer__social">
+      <span class="footer__social-title">Rămâi aproape</span>
+      <div class="footer__icons">
+        {contact.social.map((s) => (
+          <a href={s.href} class="social-btn" aria-label={s.label} target="_blank" rel="noopener noreferrer">
+            <i class={`ph ${s.icon}`} aria-hidden="true"></i>
+          </a>
+        ))}
+      </div>
+    </div>
+    <div class="footer__contact">
+      <a href={contact.phoneHref}>{contact.phone}</a>
+      <a href={`mailto:${contact.email}`}>{contact.email}</a>
+    </div>
+    <div class="footer__rule"></div>
+    <div class="footer__legal">
+      <span>© {year} Goodwine SRL</span>
+      <a href="/confidentialitate">Politica de confidențialitate</a>
+      <a href="/termeni">Termeni și condiții</a>
+      <span>Consumă vinul cu moderație. Doar 18+.</span>
+    </div>
+  </div>
+</footer>

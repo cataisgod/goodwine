@@ -1,0 +1,10 @@
+---
+import site from '../data/site.json';
+const words = site.tagline.split(/\s+/);
+---
+
+<section class="tagline" aria-label="Filozofia noastră" data-tagline>
+  <p class="tagline__text">
+    {words.map((w) => <span data-w>{w}</span>)}
+  </p>
+</section>

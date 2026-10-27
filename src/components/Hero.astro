@@ -1,0 +1,49 @@
+---
+import site from '../data/site.json';
+import { unsplash } from '../lib/unsplash';
+const { hero } = site;
+const img = unsplash('1543418219-44e30b057fea', [800, 1200, 1800, 2400]);
+---
+
+<section id="acasa" class="hero" data-hero>
+  <div class="hero__media">
+    <img
+      data-hero-img
+      src={img.src}
+      srcset={img.srcset}
+      sizes="100vw"
+      alt="Podgorie pe deal la apus"
+      fetchpriority="high"
+      decoding="async"
+    />
+  </div>
+  <div class="hero__content" data-hero-text>
+    <img
+      class="hero__logo"
+      data-reveal
+      data-delay="50"
+      style="--rd:1200ms"
+      src="/logo/goodwine-2b-light.png"
+      alt="good & wine"
+      width="460"
+      height="83"
+    />
+    <div class="hero__eyebrow" data-reveal data-delay="150" style="--rd:1200ms">{hero.eyebrow}</div>
+    <h1 class="hero__title" data-reveal data-delay="300" style="--rd:1400ms">
+      {hero.title[0]}<br />{hero.title[1]}
+    </h1>
+    <div class="ornament" data-reveal data-delay="500" style="--rd:1200ms" aria-hidden="true">
+      <span class="ornament__line"></span>
+      <span class="ornament__d ornament__d--sm"></span>
+      <span class="ornament__d ornament__d--lg"></span>
+      <span class="ornament__d ornament__d--sm"></span>
+      <span class="ornament__line"></span>
+    </div>
+    <p class="hero__text" data-reveal data-delay="650" style="--rd:1200ms">{hero.text}</p>
+    <div class="hero__actions" data-reveal data-delay="800" style="--rd:1200ms">
+      <a href="#rezervare" class="btn-pill btn-pill--light">{hero.cta} <i class="ph ph-arrow-right" aria-hidden="true"></i></a>
+      <span class="hero__rating"><i class="ph-fill ph-star" aria-hidden="true"></i>{hero.rating}</span>
+    </div>
+  </div>
+  <div class="hero__scroll" aria-hidden="true"></div>
+</section>
